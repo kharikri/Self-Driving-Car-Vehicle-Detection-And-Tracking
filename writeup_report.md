@@ -36,6 +36,9 @@ You're reading the Writeup.
 
 I started by reading in all the `car` and `non-car` images. Here is an example of one of each:
 
+![alt text](https://github.com/kharikri/SelfDrivingCar-VehicleDetectionAndTracking/blob/master/output_images/ExampleCarNoncar.jpg)
+
+
 ![alt text](file:C:/Users/Kris/Kris Stuff/Online Courses/SDC/Projects/Project 5 - Vehicle Detection/CarND-Vehicle-Detection-master/output_images/ExampleCarNoncar.jpg)
 
 The code for this step is contained in the 2nd code cell of the IPython notebook (**P5-VehicleDetectionAndTracking.ipynb**). As an aside, the images are in the .png format. I'll be using cv2 function for reading the images which is in the BGR format. However, for plotting with `matplotlib.image` which uses RGB format, I'll convert the images to RGB from BGR format. 
