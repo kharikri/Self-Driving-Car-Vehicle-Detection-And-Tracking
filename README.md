@@ -7,3 +7,5 @@ In this project vehicles are detected and tracked using computer vision and mach
 You can check out the details on my implementation [here](https://github.com/kharikri/SelfDrivingCar-VehicleDetectionAndTracking/blob/master/writeup_report.md).
 
 I implemented this project in Python, OpenCV, scikit-learn and FFmpeg.
+
+Anyone inetrested in implementing this code requires the training data which can be obtained at the [GTI vehicle image database](http://www.gti.ssr.upm.es/data/Vehicle_database.html) and the [KITTI vision benchmark suite](http://www.cvlibs.net/datasets/kitti/).
