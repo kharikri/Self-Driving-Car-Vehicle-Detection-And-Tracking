@@ -38,16 +38,13 @@ I started by reading in all the `car` and `non-car` images. Here is an example o
 
 ![alt text](https://github.com/kharikri/SelfDrivingCar-VehicleDetectionAndTracking/blob/master/output_images/ExampleCarNoncar.jpg)
 
-
-![alt text](file:C:/Users/Kris/Kris Stuff/Online Courses/SDC/Projects/Project 5 - Vehicle Detection/CarND-Vehicle-Detection-master/output_images/ExampleCarNoncar.jpg)
-
 The code for this step is contained in the 2nd code cell of the IPython notebook (**P5-VehicleDetectionAndTracking.ipynb**). As an aside, the images are in the .png format. I'll be using cv2 function for reading the images which is in the BGR format. However, for plotting with `matplotlib.image` which uses RGB format, I'll convert the images to RGB from BGR format. 
 
 There are 8792 car and 8968 non-car images. As these are roughly equal in number I don't see class imbalance issues with this data set.
 
 Next I see how the Histogram of Oriented Gradients (HOG) for a car image looks like. Here I use HOG parameters of `color space=HSV`,  `orientations=9`, `pixels_per_cell=(8, 8)` and `cells_per_block=(2, 2)`. The HOG features are extracted by importing the `hog` module from the `skimage` package. The code is shown in cells 3 and 4 in the IPython notebook. The following picture shows the original car picture along with its hog features for each of the color channels `H`, `S`, and `V`. HOG features represent a distinct signature for the original image and they are preferred over other features such as using color transforms because they are robust for variations in the image.
 
-![alt text](file:C:/Users/Kris/Kris Stuff/Online Courses/SDC/Projects/Project 5 - Vehicle Detection/CarND-Vehicle-Detection-master/output_images/HOG Features.jpg)
+![alt text](https://github.com/kharikri/SelfDrivingCar-VehicleDetectionAndTracking/blob/master/output_images/HOG%20Features.jpg)
 
 #### 2. Explain how you settled on your final choice of HOG parameters.
 
@@ -167,8 +164,7 @@ I started with a test accuracy of 98.42% and ended up with 99.44%. Note that the
 
 The following picture shows the original image and its bounding boxes obtained by the classifier with the above parameters:
 
-![alt text](file:C:/Users/Kris/Kris Stuff/Online Courses/SDC/Projects/Project 5 - Vehicle Detection/CarND-Vehicle-Detection-master/output_images/CarsWithBB.jpg)
-
+![alt text](https://github.com/kharikri/SelfDrivingCar-VehicleDetectionAndTracking/blob/master/output_images/CarsWithBB.jpg)
 
 As seen from the above picture there are too many false positives (boxes around areas where there are no cars) and duplicate boxes (multiple boxes around cars). In the following I apply heatmaps to reduce/eliminate the false positives and duplicate boxes.
 
@@ -182,7 +178,7 @@ I recorded the positions of positive detections in each frame of the video.  Fro
 
 Here are some examples of the original image, its bounding boxes, heatmap and the final image with bounding boxes which is obtained by the result of `scipy.ndimage.measurements.label()`:
 
-![alt text](file:C:/Users/Kris/Kris Stuff/Online Courses/SDC/Projects/Project 5 - Vehicle Detection/CarND-Vehicle-Detection-master/output_images/hm2hm1hm3_s.jpg)
+![alt text](https://github.com/kharikri/SelfDrivingCar-VehicleDetectionAndTracking/blob/master/output_images/hm2hm1hm3_s.jpg)
 
 As you see the final bounding boxes are correct only in the picture 3. The other two pictures have three issues:
 1. **Non-car false positives**: In picture 1 a non-car is identified as car. This is because the classifier is not accurate to identify the non-car
